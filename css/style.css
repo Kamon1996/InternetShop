@@ -137,6 +137,7 @@ nav {
    gap: 10px;
    align-items: center;
    height: 32px;
+   margin-top: auto;
 }
 
 .regular__button {
