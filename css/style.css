@@ -22,8 +22,28 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 
 body {
    font-family: 'Montserrat', sans-serif;
-   font-size: 16px;
+   font-size: 14px;
    background-color: #f5edd7;
+}
+
+h3 {
+   font-size: 28px;
+   font-weight: bold;
+}
+
+h4 {
+   font-size: 26px;
+   font-weight: bold;
+}
+
+h5 {
+   font-size: 20px;
+   font-weight: 600;
+}
+
+p {
+   line-height: 18px;
+   color: #565656;
 }
 
 
@@ -119,6 +139,7 @@ nav {
 
 .product__img {
    width: 200px;
+   height: 330px;
    object-position: center;
 }
 
@@ -173,7 +194,6 @@ nav {
    grid-template-rows: 80% 20%;
    height: 150px;
    gap: 10px;
-   align-self: center;
    padding: 15px;
    margin: -15px;
    border-bottom: 1px solid;
@@ -222,8 +242,25 @@ nav {
 }
 
 .hide {
-   display: none;
+   display: none !important;
 }
+
+.busket__main {
+   display: flex;
+}
+
+.busket__products {
+   flex: 1 0 70%;
+}
+
+.side__full-cost {
+   flex: 1 0 30%;
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+}
+
+
 
 
 

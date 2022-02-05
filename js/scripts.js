@@ -2,86 +2,89 @@ let find = false;
 let products = [
    {
       imgUrl: 'img/LoveYourself.jpg',
-      price: 1.99,
+      price: 11.99,
       description: `
-      All the questions I received, resolved. My intention is that by the time you finish this new edition, not only will you be committed to loving yourself, you’ll know exactly how to do it. And, most importantly, how to make it last.`
+      All the questions I received, resolved. My intention is that by the time you finish this new edition, not only will you be...`
    },
    {
-      imgUrl: 'img/LoveYourself.jpg',
-      price: 2.99,
+      imgUrl: 'img/2.jpg',
+      price: 13.93,
       description: `
-      A quirky entertaining collection of geometric patterns for a light and easy distraction. Designed specifically to provide you with an effortless Sweet Escape.`
+      It Ends With Us: The most heartbreaking novel you'll ever read : The most heartbreaking novel you'll ever read.`
    },
    {
-      imgUrl: 'img/LoveYourself.jpg',
-      price: 3.99,
-      description: ` Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt, velit.`
+      imgUrl: 'img/3.jpg',
+      price: 14.08,
+      description: ` Seven Husbands of Evelyn Hugo : Tiktok made me buy it!`
    },
    {
-      imgUrl: 'img/LoveYourself.jpg',
-      price: 4.99,
+      imgUrl: 'img/4.jpg',
+      price: 13.71,
       description: `
-      All the questions I received, resolved. My intention is that by the time you finish this new edition, not only will you be committed to loving yourself, you’ll know exactly how to do it. And, most importantly, how to make it last.`
+      Ugly Love
+      When Tate Collins finds airline pilot Miles Archer passed out in front of her apartment door, it is definitely not love at first sight.`
    },
    {
-      imgUrl: 'img/LoveYourself.jpg',
-      price: 5.99,
+      imgUrl: 'img/5.jpg',
+      price: 11.98,
       description: `
-      All the questions I received, resolved. My intention is that by the time you finish this new edition, not only will you be committed to loving yourself, you’ll know exactly how to do it. And, most importantly, how to make it last.`
+      The Love Hypothesis : Tiktok made me buy it! The romcom of the year!`
    },
    {
-      imgUrl: 'img/LoveYourself.jpg',
-      price: 6.99,
+      imgUrl: 'img/6.jpg',
+      price: 12.64,
       description: `
-      All the questions I received, resolved. My intention is that by the time you finish this new edition, not only will you be committed to loving yourself, you’ll know exactly how to do it. And, most importantly, how to make it last.`
+      Fast 800 Keto : *The Number 1 Bestseller* Eat well, burn fat, manage your weight long-term.`
    },
    {
-      imgUrl: 'img/LoveYourself.jpg',
-      price: 6.99,
+      imgUrl: 'img/7.jpg',
+      price: 12.85,
       description: `
-      All the questions I received, resolved. My intention is that by the time you finish this new edition, not only will you be committed to loving yourself, you’ll know exactly how to do it. And, most importantly, how to make it last.`
+      The Midnight Library : The No.1 Sunday Times bestseller and worldwide phenomenon.`
    },
    {
-      imgUrl: 'img/LoveYourself.jpg',
-      price: 6.99,
+      imgUrl: 'img/8.jpg',
+      price: 13.71,
       description: `
-      All the questions I received, resolved. My intention is that by the time you finish this new edition, not only will you be committed to loving yourself, you’ll know exactly how to do it. And, most importantly, how to make it last.`
+      Verity : The thriller that will capture your heart and blow your mind.`
    },
    {
-      imgUrl: 'img/LoveYourself.jpg',
-      price: 6.99,
+      imgUrl: 'img/9.jpg',
+      price: 21.10,
       description: `
-      All the questions I received, resolved. My intention is that by the time you finish this new edition, not only will you be committed to loving yourself, you’ll know exactly how to do it. And, most importantly, how to make it last.`
+      The Kids.
+      Hannah Lowe taught for a decade in an inner-city London sixth form. At the heart of this book...`
    },
    {
-      imgUrl: 'img/LoveYourself.jpg',
-      price: 6.99,
+      imgUrl: 'img/10.jpg',
+      price: 12.23,
       description: `
-      All the questions I received, resolved. My intention is that by the time you finish this new edition, not only will you be committed to loving yourself, you’ll know exactly how to do it. And, most importantly, how to make it last.`
+      Open Water : Winner of the Costa First Novel Award 2021.`
    },
    {
-      imgUrl: 'img/LoveYourself.jpg',
-      price: 6.99,
+      imgUrl: 'img/11.jpg',
+      price: 11.22,
       description: `
-      All the questions I received, resolved. My intention is that by the time you finish this new edition, not only will you be committed to loving yourself, you’ll know exactly how to do it. And, most importantly, how to make it last.`
+      Loki: A Bad God's Guide to Being Good.`
    },
    {
-      imgUrl: 'img/LoveYourself.jpg',
-      price: 6.99,
+      imgUrl: 'img/12.jpg',
+      price: 13.94,
       description: `
-      All the questions I received, resolved. My intention is that by the time you finish this new edition, not only will you be committed to loving yourself, you’ll know exactly how to do it. And, most importantly, how to make it last.`
+      1979 : The unmissable first thriller in an electrifying, brand-new series from the Queen of Crime.`
    },
    {
-      imgUrl: 'img/LoveYourself.jpg',
-      price: 6.99,
+      imgUrl: 'img/13.jpg',
+      price: 14.10,
       description: `
-      All the questions I received, resolved. My intention is that by the time you finish this new edition, not only will you be committed to loving yourself, you’ll know exactly how to do it. And, most importantly, how to make it last.`
+      Light Perpetual : 'Heartbreaking . . . a boundlessly rich novel.' Telegraph.`
    },
    {
-      imgUrl: 'img/LoveYourself.jpg',
-      price: 6.99,
+      imgUrl: 'img/14.jpg',
+      price: 29.66,
       description: `
-      All the questions I received, resolved. My intention is that by the time you finish this new edition, not only will you be committed to loving yourself, you’ll know exactly how to do it. And, most importantly, how to make it last.`
+      Otherlands : A World in the Making.
+      The best book on the history of life on Earth I have ever read' Tom Holland`
    },
 
 ];
@@ -95,7 +98,7 @@ const navLogin = document.querySelector('.in');
 const navLogout = document.querySelector('.out');
 
 const sectionProducts = document.querySelector('.products__grid');
-const sectionBusket = document.querySelector('.section__busket')
+const divBusket = document.querySelector('.busket__products')
 const sectionRegister = document.querySelector('.section__register')
 // const itemImg = document.querySelector('');
 // const itemPrice = document.querySelector('');
@@ -103,10 +106,6 @@ const sectionRegister = document.querySelector('.section__register')
 // const itemId = document.querySelector('');
 
 // const itemCount = document.querySelector('');
-
-let minusCount = document.querySelectorAll('.minus');
-let plusCount = document.querySelectorAll('.plus');
-let busketRegularCount = document.querySelectorAll('.busket__regular-count');
 
 
 
@@ -117,7 +116,7 @@ function displayProducts(arr) {
       sectionProducts.innerHTML += `
       <div id="${newId}" class="item">
          <img class="product__img" src="${element.imgUrl}" alt="">
-         <h5>${element.price + ' $'}</h5>
+         <h5>${element.price + ' €'}</h5>
          <p>${element.description}</p>
          <button class="to-busket__btn">To Busket</button>
          <div class="busket__regular hide">
@@ -132,28 +131,31 @@ function displayProducts(arr) {
 }
 displayProducts(products);
 
+const toBusketBtn = document.querySelectorAll('.to-busket__btn');
+let minusCount = document.querySelectorAll('.minus');
+let plusCount = document.querySelectorAll('.plus');
+let busketRegularCount = document.querySelectorAll('.busket__regular-count');
+
 let productsNodes = document.querySelectorAll('.item');
 
 
-function toBusketClick() {
-   const toBusketBtn = document.querySelectorAll('.to-busket__btn');
-   toBusketBtn.forEach((element, index) => {
-      element.addEventListener("click", function () {
-         if (find === true) {
-            element.closest('.item').querySelector('.busket__regular-count').innerHTML = 1;
-            busket.push(products[index]);
-            busket[busket.length - 1].count = 1;
-            busket[busket.length - 1].id = index;
-            document.querySelector('.bucket__count').innerHTML++
-            element.nextElementSibling.classList.toggle('hide');
-            element.classList.toggle('hide');
-         } else {
-            return;
-         }
-      })
+
+toBusketBtn.forEach((element, index) => {
+   element.addEventListener("click", function () {
+      if (find === true) {
+         element.closest('.item').querySelector('.busket__regular-count').innerHTML = 1;
+         busket.push(products[index]);
+         busket[busket.length - 1].count = 1;
+         busket[busket.length - 1].id = index;
+         busket[busket.length - 1].checked = true;
+         document.querySelector('.bucket__count').innerHTML++
+         element.nextElementSibling.classList.toggle('hide');
+         element.classList.toggle('hide');
+      } else {
+         return;
+      }
    })
-}
-toBusketClick();
+})
 
 
 navSearch.addEventListener("keyup", function () {
@@ -167,45 +169,43 @@ navSearch.addEventListener("keyup", function () {
 })
 
 
-function minusCountClick() {
-   minusCount = document.querySelectorAll('.minus');
-   minusCount.forEach(function (element, index) {
-      element.addEventListener("click", () => {
-         element.nextElementSibling.innerHTML--;
-         if (element.nextElementSibling.innerHTML <= 0) {
-            element.nextElementSibling.innerHTML = 1;
-            element.closest('.busket__regular').classList.toggle('hide');
-            element.closest('.busket__regular').previousElementSibling.classList.toggle('hide');
-            busket = busket.filter(value => value.id != index);
-         } else {
-            busket.map(function (value) {
-               if (value.id === index) {
-                  value.count--;
-               }
-            })
-         }
-         document.querySelector('.bucket__count').innerHTML--
-      })
-   })
-}
-minusCountClick();
 
 
-function plusCountClick() {
-   plusCount = document.querySelectorAll('.plus');
-   plusCount.forEach(function (element, index) {
-      element.addEventListener("click", () => {
+minusCount.forEach(function (element, index) {
+   element.addEventListener("click", () => {
+      element.nextElementSibling.innerHTML--;
+      if (element.nextElementSibling.innerHTML <= 0) {
+         element.nextElementSibling.innerHTML = 1;
+         element.closest('.busket__regular').classList.toggle('hide');
+         element.closest('.busket__regular').previousElementSibling.classList.toggle('hide');
+         busket = busket.filter(value => value.id != index);
+      } else {
          busket.map(function (value) {
             if (value.id === index) {
-               value.count++;
+               value.count--;
             }
          })
-         document.querySelector('.bucket__count').innerHTML++
-         element.previousElementSibling.innerHTML++;
-      })
+      }
+      document.querySelector('.bucket__count').innerHTML--
    })
-}
-plusCountClick();
+})
+
+
+
+
+
+plusCount.forEach(function (element, index) {
+   element.addEventListener("click", () => {
+      busket.map(function (value) {
+         if (value.id === index) {
+            value.count++;
+         }
+      })
+      document.querySelector('.bucket__count').innerHTML++
+      element.previousElementSibling.innerHTML++;
+   })
+})
+
 
 
 navBusket.addEventListener("click", () => {
@@ -213,18 +213,19 @@ navBusket.addEventListener("click", () => {
       return;
    } else {
       displayBusket();
+      fullPriceCount();
    }
 });
 
 
 function displayBusket() {
-   sectionBusket.innerHTML = '';
+   divBusket.innerHTML = ``;
    sectionProducts.classList.toggle('hide');
-   sectionBusket.classList.toggle('hide');
+   document.querySelector('.busket__main').classList.toggle('hide');
    busket.forEach(element => {
-      sectionBusket.innerHTML += `
+      divBusket.innerHTML += `
       <div class="busket__item">
-         <input class="busket__checkbox" type="checkbox">
+         <input class="busket__checkbox" type="checkbox" ${element.checked ? 'checked' : ''}>
          <img class="busket__img" src="${element.imgUrl}" alt="">
          <div class="busket__description">${element.description}.</div>
          <div class="delete">Delete</div>
@@ -233,11 +234,20 @@ function displayBusket() {
       </div>
       `
    });
+   document.querySelectorAll('.busket__checkbox').forEach((element, index) => {
+      element.addEventListener("click", () => {
+         busket[index].checked = !busket[index].checked;
+         fullPriceCount();
+      })
+   })
 }
+
+
+
 
 navLogo.addEventListener("click", () => {
    sectionProducts.classList.remove('hide');
-   sectionBusket.classList.add('hide');
+   document.querySelector('.busket__main').classList.add('hide');
 })
 
 
@@ -251,28 +261,46 @@ navLogin.addEventListener("click", (event) => {
    formTitle.classList.add('title');
 })
 
-function navLogoutClick() {
-   busketRegularCount = document.querySelectorAll('.busket__regular-count');
-   navLogout.addEventListener("click", () => {
-      navLogin.classList.toggle('hide');
-      navLogout.classList.toggle('hide');
-      toBusketBtn.forEach(function (element) {
-         element.classList.remove('hide');
-      })
-      busketRegularCount.forEach(function (element) {
-         element.innerHTML = 1;
-      })
-      document.querySelectorAll('.busket__regular').forEach(function (element) {
-         element.classList.add('hide');
-      })
-      busket = [];
-      document.querySelector('.bucket__count').innerHTML = 0;
-      sectionProducts.classList.remove('hide');
-      sectionBusket.classList.add('hide');
-      return find = false;
+navLogout.addEventListener("click", () => {
+   navLogin.classList.toggle('hide');
+   navLogout.classList.toggle('hide');
+   toBusketBtn.forEach(function (element) {
+      element.classList.remove('hide');
    })
+   busketRegularCount.forEach(function (element) {
+      element.innerHTML = 1;
+   })
+   document.querySelectorAll('.busket__regular').forEach(function (element) {
+      element.classList.add('hide');
+   })
+   busket = [];
+   document.querySelector('.bucket__count').innerHTML = 0;
+   sectionProducts.classList.remove('hide');
+   document.querySelector('.busket__main').classList.add('hide');
+   return find = false;
+})
+
+
+
+function fullPriceCount() {
+   let fullPrice = 0;
+   busket.forEach(element => {
+      if (element.checked === true) {
+         fullPrice += element.count * element.price;
+      }
+   })
+   document.querySelector('.full-price').innerHTML = `${fullPrice.toFixed(2)} €`;
 }
-navLogoutClick();
+
+function fullBusketCount() {
+   let fullCount = 0;
+   busket.forEach(element => {
+      if (element.checked === true) {
+         fullCount += element.count;
+      }
+   })
+   document.querySelector('.bucket__count').innerHTML = fullCount;
+}
 
 
 
