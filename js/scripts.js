@@ -1,93 +1,104 @@
-let find = false;
+let authorized = false;
 let products = [
    {
       imgUrl: 'img/LoveYourself.jpg',
       price: 11.99,
       description: `
-      All the questions I received, resolved. My intention is that by the time you finish this new edition, not only will you be...`
+   All the questions I received, resolved. My intention is that by the time you finish this new edition, not only will you be...`
    },
    {
       imgUrl: 'img/2.jpg',
       price: 13.93,
       description: `
-      It Ends With Us: The most heartbreaking novel you'll ever read : The most heartbreaking novel you'll ever read.`
+   It Ends With Us: The most heartbreaking novel you'll ever read: The most heartbreaking novel you'll ever read.`
    },
    {
       imgUrl: 'img/3.jpg',
       price: 14.08,
-      description: ` Seven Husbands of Evelyn Hugo : Tiktok made me buy it!`
+      description: `
+   Seven Husbands of Evelyn Hugo : Tiktok made me buy it!`
    },
    {
       imgUrl: 'img/4.jpg',
       price: 13.71,
       description: `
-      Ugly Love
-      When Tate Collins finds airline pilot Miles Archer passed out in front of her apartment door, it is definitely not love at first sight.`
+   Ugly Love
+When Tate Collins finds airline pilot Miles Archer passed out in front of her apartment door, it is definitely not love at first sight.`
    },
    {
       imgUrl: 'img/5.jpg',
       price: 11.98,
       description: `
-      The Love Hypothesis : Tiktok made me buy it! The romcom of the year!`
+   The Love Hypothesis : Tiktok made me buy it! The romcom of the year!`
    },
    {
       imgUrl: 'img/6.jpg',
       price: 12.64,
       description: `
-      Fast 800 Keto : *The Number 1 Bestseller* Eat well, burn fat, manage your weight long-term.`
+   Fast 800 Keto : *The Number 1 Bestseller* Eat well, burn fat, manage your weight long-term.`
    },
    {
       imgUrl: 'img/7.jpg',
       price: 12.85,
       description: `
-      The Midnight Library : The No.1 Sunday Times bestseller and worldwide phenomenon.`
+   The Midnight Library : The No.1 Sunday Times bestseller and worldwide phenomenon.`
    },
    {
       imgUrl: 'img/8.jpg',
       price: 13.71,
       description: `
-      Verity : The thriller that will capture your heart and blow your mind.`
+   Verity : The thriller that will capture your heart and blow your mind.`
    },
    {
       imgUrl: 'img/9.jpg',
       price: 21.10,
       description: `
-      The Kids.
-      Hannah Lowe taught for a decade in an inner-city London sixth form. At the heart of this book...`
+   The Kids.
+Hannah Lowe taught for a decade in an inner-city London sixth form. At the heart of this book...`
    },
    {
       imgUrl: 'img/10.jpg',
       price: 12.23,
       description: `
-      Open Water : Winner of the Costa First Novel Award 2021.`
+   Open Water : Winner of the Costa First Novel Award 2021.`
    },
    {
       imgUrl: 'img/11.jpg',
       price: 11.22,
       description: `
-      Loki: A Bad God's Guide to Being Good.`
+   Loki: A Bad God's Guide to Being Good.`
    },
    {
       imgUrl: 'img/12.jpg',
       price: 13.94,
       description: `
-      1979 : The unmissable first thriller in an electrifying, brand-new series from the Queen of Crime.`
+   1979 : The unmissable first thriller in an electrifying, brand-new series from the Queen of Crime.`
    },
    {
       imgUrl: 'img/13.jpg',
-      price: 14.10,
+      price: 14.11,
       description: `
-      Light Perpetual : 'Heartbreaking . . . a boundlessly rich novel.' Telegraph.`
+   Light Perpetual : 'Heartbreaking . . . a boundlessly rich novel.' Telegraph.`
    },
    {
       imgUrl: 'img/14.jpg',
       price: 29.66,
       description: `
-      Otherlands : A World in the Making.
-      The best book on the history of life on Earth I have ever read' Tom Holland`
+   Otherlands : A World in the Making.The best book on the history of life on Earth I have ever read' Tom Holland`
    },
-
 ];
+
+function addIdCount() {
+   products.forEach((element, index) => {
+      if (element.count > 1) {
+         return;
+      } else {
+         element.count = 1;
+      }
+      element.id = index;
+   })
+}
+addIdCount();
 
 let busket = [];
 
@@ -107,60 +118,64 @@ const sectionRegister = document.querySelector('.section__register')
 
 // const itemCount = document.querySelector('');
 
+let toBusketBtn
+let minusCount
+let plusCount
+let busketRegularCount
+let productsNodes
 
-
+let newId = 0;
 function displayProducts(arr) {
    sectionProducts.innerHTML = '';
-   let newId = 0;
    arr.forEach(element => {
       sectionProducts.innerHTML += `
       <div id="${newId}" class="item">
          <img class="product__img" src="${element.imgUrl}" alt="">
-         <h5>${element.price + ' €'}</h5>
-         <p>${element.description}</p>
+         <input class="item__price" type="text" placeholder="Price" value="${element.price + ' €'}">
+         <textarea class="item__description" type="text" maxlength="120" placeholder="Description"
+         required>${element.description}</textarea>
          <button class="to-busket__btn">To Busket</button>
          <div class="busket__regular hide">
             <div class="regular__button minus"><i class="fas fa-minus"></i></div>
-            <div class="busket__regular-count">1</div>
+            <div class="busket__regular-count">${element.count}</div>
             <div class="regular__button plus"><i class="fas fa-plus"></i></div>
          </div>
       </div>
       `
       newId++;
    });
+   toBusketBtn = document.querySelectorAll('.to-busket__btn');
+   minusCount = document.querySelectorAll('.minus');
+   plusCount = document.querySelectorAll('.plus');
+   busketRegularCount = document.querySelectorAll('.busket__regular-count');
+   productsNodes = document.querySelectorAll('.item');
 }
 displayProducts(products);
 
-const toBusketBtn = document.querySelectorAll('.to-busket__btn');
-let minusCount = document.querySelectorAll('.minus');
-let plusCount = document.querySelectorAll('.plus');
-let busketRegularCount = document.querySelectorAll('.busket__regular-count');
-
-let productsNodes = document.querySelectorAll('.item');
-
-
-
-toBusketBtn.forEach((element, index) => {
-   element.addEventListener("click", function () {
-      if (find === true) {
-         element.closest('.item').querySelector('.busket__regular-count').innerHTML = 1;
-         busket.push(products[index]);
-         busket[busket.length - 1].count = 1;
-         busket[busket.length - 1].id = index;
-         busket[busket.length - 1].checked = true;
-         document.querySelector('.bucket__count').innerHTML++
-         element.nextElementSibling.classList.toggle('hide');
-         element.classList.toggle('hide');
-      } else {
-         return;
-      }
+function eventToBusketBtn() {
+   toBusketBtn.forEach((element, index) => {
+      element.addEventListener("click", function () {
+         if (authorized === true) {
+            busket.push(products[index]);
+            busket[busket.length - 1].count = 1;
+            busket[busket.length - 1].id = index;
+            busket[busket.length - 1].checked = true;
+            document.querySelector('.bucket__count').innerHTML++
+            element.nextElementSibling.classList.toggle('hide');
+            element.classList.toggle('hide');
+         } else {
+            return;
+         }
+      })
    })
-})
+}
+eventToBusketBtn();
+
 
 
 navSearch.addEventListener("keyup", function () {
    productsNodes.forEach((element, index) => {
-      if (!element.querySelector('p').innerHTML.toLowerCase().includes(navSearch.value.toLowerCase())) {
+      if (!element.querySelector('.item__description').innerHTML.toLowerCase().includes(navSearch.value.toLowerCase())) {
          productsNodes[index].classList.add('hide');
       } else if (productsNodes[index].classList.contains('hide')) {
          productsNodes[index].classList.toggle('hide');
@@ -171,40 +186,46 @@ navSearch.addEventListener("keyup", function () {
 
 
 
-minusCount.forEach(function (element, index) {
-   element.addEventListener("click", () => {
-      element.nextElementSibling.innerHTML--;
-      if (element.nextElementSibling.innerHTML <= 0) {
-         element.nextElementSibling.innerHTML = 1;
-         element.closest('.busket__regular').classList.toggle('hide');
-         element.closest('.busket__regular').previousElementSibling.classList.toggle('hide');
-         busket = busket.filter(value => value.id != index);
-      } else {
+
+function eventMinusCount() {
+   minusCount.forEach(function (element, index) {
+      element.addEventListener("click", () => {
+         element.nextElementSibling.innerHTML--;
+         if (element.nextElementSibling.innerHTML <= 0) {
+            element.nextElementSibling.innerHTML = 1;
+            element.closest('.busket__regular').classList.toggle('hide');
+            element.closest('.busket__regular').previousElementSibling.classList.toggle('hide');
+            busket = busket.filter(value => value.id != index);
+         } else {
+            busket.map(function (value) {
+               if (value.id === index) {
+                  value.count--;
+               }
+            })
+         }
+         document.querySelector('.bucket__count').innerHTML--
+      })
+   })
+}
+eventMinusCount();
+
+
+
+function eventPlusCount() {
+   plusCount.forEach(function (element, index) {
+      element.addEventListener("click", () => {
          busket.map(function (value) {
             if (value.id === index) {
-               value.count--;
+               value.count++;
             }
          })
-      }
-      document.querySelector('.bucket__count').innerHTML--
-   })
-})
-
-
-
-
-
-plusCount.forEach(function (element, index) {
-   element.addEventListener("click", () => {
-      busket.map(function (value) {
-         if (value.id === index) {
-            value.count++;
-         }
+         document.querySelector('.bucket__count').innerHTML++
+         element.previousElementSibling.innerHTML++;
       })
-      document.querySelector('.bucket__count').innerHTML++
-      element.previousElementSibling.innerHTML++;
    })
-})
+}
+eventPlusCount();
+
 
 
 
@@ -224,7 +245,7 @@ function displayBusket() {
    document.querySelector('.busket__main').classList.toggle('hide');
    busket.forEach(element => {
       divBusket.innerHTML += `
-      <div class="busket__item">
+      <div class="busket__item" id="${element.id}">
          <input class="busket__checkbox" type="checkbox" ${element.checked ? 'checked' : ''}>
          <img class="busket__img" src="${element.imgUrl}" alt="">
          <div class="busket__description">${element.description}.</div>
@@ -277,7 +298,7 @@ navLogout.addEventListener("click", () => {
    document.querySelector('.bucket__count').innerHTML = 0;
    sectionProducts.classList.remove('hide');
    document.querySelector('.busket__main').classList.add('hide');
-   return find = false;
+   return authorized = false;
 })
 
 
@@ -302,18 +323,56 @@ function fullBusketCount() {
    document.querySelector('.bucket__count').innerHTML = fullCount;
 }
 
+const addNewBookbtn = document.querySelector('.book-add');
+const addToshop = document.querySelector('.book__add-to-shop');
+const addNewBookModal = document.querySelector('.book-add__form')
+
+addNewBookbtn.addEventListener("click", function () {
+   addNewBookModal.classList.toggle('hide');
+   console.log(document.querySelector('.new__book-add').classList.toggle('fixed'))
+})
+
+let regImgUrl = /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/
+
+addToshop.addEventListener("click", function (e) {
+   e.preventDefault();
+   if (
+      (
+         document.querySelector('.imgurl-add').value == '' ||
+         !regImgUrl.test(document.querySelector('.imgurl-add').value)
+      ) ||
+      document.querySelector('.price-add').value == '' ||
+      document.querySelector('.description-add').value == ''
+   ) {
+      return;
+   } else {
+      products.push({
+         imgUrl: document.querySelector('.imgurl-add').value,
+         price: document.querySelector('.price-add').value,
+         description: document.querySelector('.description-add').value,
+      })
+      document.querySelector('.description-add').value = '';
+      document.querySelector('.price-add').value = '';
+      document.querySelector('.imgurl-add').value = '';
+      addIdCount();
+      displayProducts(products);
+      eventToBusketBtn();
+      eventMinusCount();
+      eventPlusCount();
+   }
+})
 
 
 
 
-
-
-
-let usersData = [];
+let usersData = [{
+   email: "admin@gmail.com",
+   password: "admin"
+}];
 
 const signUpButton = document.querySelector('input[value="Sign Up"]');
 const loginButton = document.querySelector('input[value=Login]');
-const userName = document.querySelector('input[type="text"]')
+const userName = document.querySelector('input[name="login"]')
 const email = document.querySelector('input[type="email"]')
 const password = document.querySelector('input[type="password"]')
 const formTitle = document.querySelector('h2')
@@ -419,7 +478,7 @@ loginButton.addEventListener("click", function (event) {
    }
    usersData.forEach(function (element) {  // Search this email  
       if (                                 //  and password in arr                
-         email.value == element.Email &
+         email.value == element.Email &&
          password.value == element.Password
       ) {
          callBack('Login Successfully');
@@ -428,10 +487,16 @@ loginButton.addEventListener("click", function (event) {
          }, 1000)
          navLogout.classList.toggle('hide');
          navLogin.classList.toggle('hide');
-         return find = true;
+         return authorized = true;
       }
+      // if (
+      //    email.value == "admin@gmail.com" &&
+      //    password.value == "admin"
+      // ) {
+      //    document.querySelector('.new__book-add').classList.toggle('hide');
+      // }
    })
-   if (find === false) {
+   if (authorized === false) {
       callBack('Invalid Email or Password');
       tryAgain.classList.remove('hide');
    }
