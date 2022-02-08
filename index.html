@@ -29,7 +29,19 @@
                </div>
             </div>
          </nav>
+
+         <div class="new__book-add">
+            <button class="book-add">Add New Book</button>
+            <form class="book-add__form hide">
+               <input class="imgurl-add" type="url" placeholder="Enter img URL" required>
+               <input class="price-add" type="number" step="0.01" min="0.01" placeholder="Enter book price" required>
+               <textarea class="description-add" type="text" maxlength="120" placeholder="Description"
+                  required></textarea>
+               <input type="submit" value="Add To Shop" class="book__add-to-shop">
+            </form>
+         </div>
       </header>
+
 
 
       <section class="section__register hide">
@@ -78,5 +90,6 @@
    <script src="https://kit.fontawesome.com/2a4c7c3d7d.js" crossorigin="anonymous"></script>
    <!-- <script src="js/regformjs.js"></script> -->
 </body>
+<!-- <img src="img/123.jfif" alt=""> -->
 
 </html>
