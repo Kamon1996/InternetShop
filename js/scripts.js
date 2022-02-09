@@ -1,4 +1,4 @@
-let authorized = false;
+let authorized = true;
 let products = [
    {
       imgUrl: 'img/LoveYourself.jpg',
